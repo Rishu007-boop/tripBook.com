@@ -117,20 +117,20 @@ function Navbar() {
               <HStack spacing={["15px", "12px"]}>
                 <Box>
                   <Link href="#" className={styles.imgLink}>
-                    INR
+                    USD
                   </Link>
                 </Box>
 
                 <Link href="#">
-                  <Image
+                  {/* <Image
                     borderRadius="50%"
                     background="none"
                     width={25}
                     height={25}
-                    src={"/" + "ind.jpeg"}
-                    alt="IND"
+                    src={"/" + "usa.jpeg"}
+                    alt="USA"
                     marginTop="4px"
-                  />
+                  /> */}
                 </Link>
 
                 <Link href="#">

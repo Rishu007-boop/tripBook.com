@@ -63,7 +63,7 @@ import LoadingScreen from '../components/pre_loader/loadingScreen';
                     background="none"
                     width={25}
                     height={25}
-                    alt="IND" src="ind.jpeg" />Help <BsQuestionCircle fontSize="1.5rem" cursor="pointer" /> <CgProfile cursor="pointer" fontSize="1.5rem" /></Flex>
+                    alt="USA" src="usa.jpeg" />Help <BsQuestionCircle fontSize="1.5rem" cursor="pointer" /> <CgProfile cursor="pointer" fontSize="1.5rem" /></Flex>
         </Box>
       <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
         <Flex p={8} flex={1} align={'center'} justify={'center'}>

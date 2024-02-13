@@ -35,8 +35,8 @@ const ListProperty = () => {
               background="none"
               width={25}
               height={25}
-              alt="IND"
-              src="ind.jpeg"
+              alt="USA"
+              src="usa.jpeg"
             />
             Help <BsQuestionCircle fontSize="1.5rem" cursor="pointer" />{" "}
             <CgProfile cursor="pointer" fontSize="1.5rem" />
