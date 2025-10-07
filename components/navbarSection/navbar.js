@@ -2,6 +2,7 @@ import styles from "./navbar.module.css";
 import Link from "next/link";
 import { Icon } from "@chakra-ui/icons";
 import jwt from "jsonwebtoken";
+import React from "react";
 
 import {
   IoAirplaneOutline,
@@ -28,6 +29,7 @@ import { useRouter } from "next/router";
 let TSEC = "hello";
 
 function Navbar() {
+  const [selected, setSelected] = React.useState("Stays");
   const toast = useToast();
   const { auth, setAuth } = useContext(AuthContext);
   const router = useRouter();

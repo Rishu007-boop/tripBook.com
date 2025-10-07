@@ -26,7 +26,9 @@ import {
 } from "react-icons/io5";
 import { RiCommunityLine } from "react-icons/ri";
 
+
 function DraverNav() {
+  const [selected, setSelected] = React.useState("Stays"); // Default selected item
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
@@ -35,11 +37,11 @@ function DraverNav() {
       <Button
         ref={btnRef}
         colorScheme="#004cb8"
-         
+
         border="1px solid white"
         onClick={onOpen}
         className={styles.smallnavbutton}
-        // fontSize={{ md: "10px", sm: "16px" }}
+      // fontSize={{ md: "10px", sm: "16px" }}
       >
         Explore-more
       </Button>
@@ -61,45 +63,78 @@ function DraverNav() {
           </DrawerHeader>
 
           <DrawerBody>
-            <Link href="stay" className={styles.navRow2s}>
+            <Link
+              href="/stay"
+              className={`${styles.navRow2s} ${selected === "Stays" ? styles.activeNav : ""}`}
+              onClick={() => setSelected("Stays")}
+            >
               <IoBedOutline className={styles.iconsStyles1} />
               Stays
             </Link>
 
-            <Link href="/flights" className={styles.navRow2s}>
+
+            <Link 
+              href="/flights"
+              className={`${styles.navRow2s} ${selected === "Flights" ? styles.activeNav : ""}`}
+              onClick={() => setSelected("Flights")}
+              >
               <IoAirplaneOutline className={styles.iconsStyles1} />
               Flights
             </Link>
 
-            <Link href="#" className={styles.navRow2s}>
+            <Link 
+              href="#" 
+              className={`${styles.navRow2s} ${selected === "#" ? styles.activeNav : ""}`}
+              onClick={() => setSelected("#")}
+            >
               <RiCommunityLine className={styles.iconsStyles1} />
               Flights + Hotel
             </Link>
 
-            <Link href="/carrental" className={styles.navRow2s}>
+            <Link 
+              href="/carrental" 
+              className={`${styles.navRow2s} ${selected === "Carrentals" ? styles.activeNav : ""}`}
+              onClick={() => setSelected("Carrentals")}
+              >
               <IoCarSportOutline className={styles.iconsStyles1} />
               Car rentals
             </Link>
 
-            <Link href="/regiter" className={styles.navRow2s}>
+            <Link 
+              href="/regiter" 
+              className={`${styles.navRow2s} ${selected === "Register" ? styles.activeNav : ""}`}
+              onClick={() => setSelected("Register")}
+              >
               <IoFlowerOutline className={styles.iconsStyles1} />
               Attractions
             </Link>
 
-            <Link href="/login" className={styles.navRow2s}>
+            <Link 
+              href="/login" 
+              className={`${styles.navRow2s} ${selected === "Login" ? styles.activeNav : ""}`}
+              onClick={() => setSelected("Login")}
+              >
               <IoCarOutline className={styles.iconsStyles1} />
               Airport taxis
             </Link>
           </DrawerBody>
 
           <DrawerFooter>
-            <Link href="/signup" className={styles.navRow2s}>
+            <Link 
+              href="/signup" 
+              className={`${styles.navRow2s} ${selected === "Signup" ? styles.activeNav : ""}`}
+              onClick={() => setSelected("Signup")}
+              >
               <Button variant="outline" mr={3}>
                 Register
               </Button>
             </Link>
 
-            <Link href="/signin" className={styles.navRow2s}>
+            <Link 
+              href="/signin" 
+              className={`${styles.navRow2s} ${selected === "Signin" ? styles.activeNav : ""}`}
+              onClick={() => setSelected("Signin")}
+              >
               <Button colorScheme="blue">Sign in</Button>
             </Link>
           </DrawerFooter>

@@ -117,6 +117,12 @@ color: black;
   margin-top: 12px;
 }
 
+.activeNav {
+  border: 2px solid #fff !important;
+  color: #004cb8 !important; 
+  background-color: #eaeaff; 
+}
+
 
 @media only screen and (max-width: 650px) {
   .stackBox {
